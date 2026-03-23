@@ -1,0 +1,63 @@
+@import '../../index.less';
+
+.page {
+  width: 100%;
+  height: 100%;
+  padding: 24px 28px;
+  background: var(--colorBgBase);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: background 0.25s ease;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--colorScrollThumb);
+    border-radius: 3px;
+  }
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.pageTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--colorText);
+  margin: 0 0 4px;
+}
+
+.pageDesc {
+  font-size: 13px;
+  color: var(--colorTextMuted);
+  margin: 0;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search {
+  width: 280px;
+}
+
+.tableWrap {
+  flex: 1;
+  background: var(--colorPanelBg);
+  border: 1px solid var(--colorBorder);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0 4px;
+  box-shadow: 0 2px 8px var(--colorShadow);
+}

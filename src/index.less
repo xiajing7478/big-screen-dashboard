@@ -1,0 +1,55 @@
+// Less 变量 —— 编译期常量，仅作深色主题的编译回退值
+@primary: #00b4ff;
+@primary-light: #00d4ff;
+@bg-dark: #0a0e1a;
+@text-light: #e0f4ff;
+@text-muted: rgba(160, 210, 240, 0.38);
+@text-secondary: rgba(160, 210, 240, 0.65);
+
+// CSS 变量 —— 运行时主题，由 App.tsx 的 useEffect 覆盖
+:root {
+  --colorPrimary: #00b4ff;
+  --colorPrimaryLight: #00d4ff;
+  --colorBgBase: #0a0e1a;
+  --colorBgSidebar: #060d1f;
+  --colorBgContainer: #0d1424;
+  --colorBgHover: rgba(0, 180, 255, 0.08);
+  --colorBgActive: rgba(0, 180, 255, 0.14);
+  --colorText: #e0f4ff;
+  --colorTextSecondary: rgba(160, 210, 240, 0.65);
+  --colorTextMuted: rgba(160, 210, 240, 0.38);
+  --colorBorder: rgba(0, 180, 255, 0.14);
+  --colorBorderStrong: rgba(0, 180, 255, 0.38);
+  --colorShadow: rgba(0, 0, 0, 0.4);
+  --colorAvatarBg: rgba(0, 180, 255, 0.12);
+  --colorAvatarBorder: rgba(0, 180, 255, 0.3);
+  --colorPanelBg: rgba(255, 255, 255, 0.03);
+  --colorScrollThumb: rgba(0, 180, 255, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: var(--colorBgBase);
+  color: var(--colorText);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
