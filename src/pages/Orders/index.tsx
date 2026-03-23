@@ -78,6 +78,7 @@ const Orders = () => {
         <AppButton type="primary" icon={<PlusOutlined />}>
           新建订单
         </AppButton>
+        <AppButton icon={<ReloadOutlined />}>刷新</AppButton>
       </div>
 
       <div className={styles.toolbar}>
