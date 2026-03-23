@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - 'feat/**'
+      - 'fix/**'
+  pull_request:
+    branches:
+      - main
+      - dev
+
+# 同一分支的新 push 会取消前一次未完成的 CI，节省资源
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: 代码质量检查
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: 配置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: TypeScript 类型检查
+        run: pnpm typecheck
+
+      - name: ESLint 代码检查
+        run: pnpm lint
+
+      - name: 生产构建验证
+        run: pnpm build
+        env:
+          # 替换为你的仓库名，例如 /big-screen-dashboard/
+          VITE_APP_BASE: /${{ github.event.repository.name }}/
+
+      - name: 上传构建产物（可选，用于预览）
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-preview-${{ github.sha }}
+          path: dist/
+          retention-days: 3

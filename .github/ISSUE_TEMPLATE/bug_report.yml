@@ -1,0 +1,67 @@
+name: 🐛 Bug 报告
+description: 发现了一个 Bug？请告诉我们
+title: '[Bug] '
+labels: ['bug', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你提交 Bug 报告！请尽量填写完整，以便我们快速定位问题。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 清晰简洁地描述这个 Bug 是什么
+      placeholder: 当我点击 XX 按钮时，出现了 XX 错误...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 描述如何复现这个问题
+      placeholder: |
+        1. 进入 '...' 页面
+        2. 点击 '...' 按钮
+        3. 看到错误 '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+      description: 正常情况下应该发生什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图
+      description: 如有截图，请粘贴在这里。
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 浏览器
+      multiple: true
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: 例如 macOS 14, Windows 11
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: 其他任何可能有帮助的信息

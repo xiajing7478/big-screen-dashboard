@@ -1,0 +1,34 @@
+# CODEOWNERS — 配置各目录/文件的默认代码 Review 负责人
+
+# 格式：路径 @GitHub用户名
+
+# 文档：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# 全局默认负责人（如果没有更具体的规则匹配）
+
+# 把 @your-username 替换为你或团队成员的 GitHub 用户名
+
+-                   @your-username
+
+# 核心配置文件变更，需要所有者审核
+
+package.json @your-username
+pnpm-lock.yaml @your-username
+vite.config.ts @your-username
+tsconfig\*.json @your-username
+
+# CI/CD 流水线变更，需要 DevOps / 架构师审核
+
+.github/ @your-username
+.husky/ @your-username
+commitlint.config.js @your-username
+
+# 路由和状态管理，需要架构评审
+
+src/router/ @your-username
+src/store/ @your-username
+
+# 页面组件，各自负责人可在此细化
+
+src/pages/ @your-username
+src/components/ @your-username
