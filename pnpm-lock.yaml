@@ -11,6 +11,9 @@ importers:
       '@ant-design/icons':
         specifier: ^6.1.0
         version: 6.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@xiajing7478/cxa-business-components':
+        specifier: 1.0.0
+        version: 1.0.0(antd@6.3.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       antd:
         specifier: ^6.3.3
         version: 6.3.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -862,6 +865,13 @@ packages:
         optional: true
       babel-plugin-react-compiler:
         optional: true
+
+  '@xiajing7478/cxa-business-components@1.0.0':
+    resolution: {integrity: sha512-kM28JjzliyHr1lZys9UD66W3B8Zf47zcPsRMD9eV3fTw6wWS76aKQ3nJX+I/UG6ciW2W8XcxTqBBuA4ieqLdfA==, tarball: https://npm.pkg.github.com/download/@xiajing7478/cxa-business-components/1.0.0/3a1fe7d0e30ac4a2b12045a4501ffd55201c210a}
+    peerDependencies:
+      antd: '>=5.0.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2843,6 +2853,12 @@ snapshots:
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.7
       vite: 8.0.0(@types/node@24.12.0)(jiti@2.6.1)(less@4.6.4)(yaml@2.8.3)
+
+  '@xiajing7478/cxa-business-components@1.0.0(antd@6.3.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      antd: 6.3.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:

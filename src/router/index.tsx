@@ -4,6 +4,7 @@ import Dashboard from '@/pages/Dashboard'
 import Orders from '@/pages/Orders'
 import Packages from '@/pages/Packages'
 import Plans from '@/pages/Plans'
+import Person from '@/pages/Person'
 import Layout from '@/components/Layout'
 import ProtectedRoute from '@/components/ProtectedRoute'
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
           {
             path: 'plans',
             element: <Plans />,
+          },
+          {
+            path: 'person',
+            element: <Person />,
           },
         ],
       },

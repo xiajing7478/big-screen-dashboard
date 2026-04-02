@@ -19,6 +19,7 @@ const menuItems = [
   { key: '/orders', icon: <ShoppingCartOutlined />, label: '订单管理' },
   { key: '/packages', icon: <AppstoreOutlined />, label: '套餐管理' },
   { key: '/plans', icon: <ScheduleOutlined />, label: '计划管理' },
+  { key: '/person', icon: <UserOutlined />, label: '个人中心' },
 ]
 
 const Layout = () => {
