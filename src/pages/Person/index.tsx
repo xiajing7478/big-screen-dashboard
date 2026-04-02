@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 // import Item from './components/Item'
-import { CXAButton, NotificationList } from '@xiajing7478/cxa-business-components'
-import { type NotificationItem } from '@xiajing7478/cxa-business-components'
+import { CXAButton, NotificationList } from 'cxa-business-components'
+import { type NotificationItem } from 'cxa-business-components'
 import { Button } from 'antd'
 const Person: React.FC = () => {
   const [count, setCount] = useState(0)
